@@ -22,7 +22,7 @@ If you're using a **GCC-based/-like compiler** (like clang, cygwin, MinGW, TDM-G
 
 If you choose this, I have make a handy implement for VC6 C language, based on the `va_list` implement in another answer.
 
-```
+```C
 // #include <stdio.h>  /* for _vsnprintf */
 // No, you don't need this
 #include <stdlib.h> /* for malloc	  */
