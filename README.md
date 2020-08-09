@@ -83,6 +83,13 @@ int main(void)
 	char *s;
 	asprintf(&s, "%d", 12345);
 	puts(s);
+
+	free(s);
+	// note that s is dynamically allocated
+	// though modern Windows will free everything for you when you exit
+	// you may consider free those spaces no longer in need in real programming
+	// or when you're targeting older Windows Versions.
+
 	return 0;
 }
 ```
