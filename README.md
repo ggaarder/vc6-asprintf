@@ -20,7 +20,7 @@ If you're using a **GCC-based/-like compiler** (like clang, cygwin, MinGW, TDM-G
 
 2. Make a buffer that is **large enough** (which is not easy), then you can get a correct buffer size.
 
-If you choose this, I have make a handy implement for VC6 C language, based on the `va_list` implement in another answer.
+If you choose this, I have make a handy implementation for VC6 C language, based on the `va_list` implement in another answer.
 
 ```C
 // #include <stdio.h>  /* for _vsnprintf */
