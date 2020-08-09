@@ -146,7 +146,7 @@ If you add some `puts`, you will find that second _vsnprintf returns -1 doesn't 
 
 Note that when the `count` argument passed in is smaller than the actual string length to write, though `_snprintf` returns -1, it will actually write `count` characters into the buffer.
 
-## 2. *Write one yourself with va_list? No way!*
+## 2. *Using vscprintf? No way!*
 
 snprintf enters the standard library in C99, and there is no snprintf, _vsnprintf and __vscprintf:
 
@@ -156,6 +156,8 @@ asprintf.obj : error LNK2001: unresolved external symbol __vscprintf
 ```
 
 So you can't use the `va_list` implementation in one of the answers.
+
+Actually, there is `_vsnprintf` in VC6, see 3. below. But `_vscprint` is *really* absent.
 
 ## 3. *`_vsnprint` & `_snprintf`: Present but Absent*
 
