@@ -142,6 +142,8 @@ which supports my assumption.
 
 I initialized `s1` with `{0}`, otherwise it will *not* be null-terminated. `_snprintf` doesn't do that, since the `count` argument is too small.
 
+If you add some `puts`, you will find that second _vsnprintf returns -1 doesn't write anything into `s`, since we passed `0` as the count argument.
+
 Note that when the `count` argument passed in is smaller than the actual string length to write, though `_snprintf` returns -1, it will actually write `count` characters into the buffer.
 
 ## 2. *Write one yourself with va_list? No way!*
